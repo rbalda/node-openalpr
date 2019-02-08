@@ -27,15 +27,15 @@
     "url": "git://github.com/netPark/node-openalpr.git"
   },
   "dependencies": {
-    "fs-extra": "^0.23.1",
-    "nan": "^2.0.5",
+    "fs-extra": "^7.0.1",
+    "nan": "^2.12.1",
     "node-pre-gyp": "https://github.com/mapbox/node-pre-gyp.git"
   },
   "main": "./src/openalpr",
   "binary": {
     "module_name": "node_openalpr",
     "module_path": "release/{platform}_{arch}/",
-    "host": ""
+    "host": "https://controliq.com.ec"
   },
   "engines": {
     "node": ">= 4.0.0",

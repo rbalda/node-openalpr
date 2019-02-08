@@ -38,7 +38,7 @@ function OpenALPR () {
 		}
 		
 		if (!runtime && os.platform () === "win32") {
-			runtime = path.join (__dirname, "../openalpr_runtime/");
+			runtime = path.join (__dirname, "/usr/share/openalpr/runtime_data");
 		}
 		
 		var cpu_count = os.cpus ().length;
@@ -50,7 +50,6 @@ function OpenALPR () {
 		if (start_queue !== false) {
 			this.StartQueue ();
 		}
-
 		return initialized;
 	}
 	
@@ -69,7 +68,7 @@ function OpenALPR () {
 		if (!initialized || typeof loop === "object") {
 			return;
 		}
-	
+		console.log(this.queueLoop)
 		loop = setInterval (this.queueLoop, 32);
 	}
 	
@@ -93,7 +92,6 @@ function OpenALPR () {
 		if (!initialized) {
 			throw "OpenALPR Not Initialized";
 		}
-		
 		return nativeLPR.GetVersion ();
 	}
 	
