@@ -33,7 +33,7 @@ class LPRQueueItem
 class LPR {
 	public:
 		LPR (std::string configFile = "", std::string runtimePath = "", std::string plateRegion = "us") {
-			this->openalpr = new alpr::Alpr (plateRegion, configFile, runtimePath);
+			this->openalpr = new alpr::Alpr ("us", configFile, runtimePath);
 			this->openalpr->setTopN (10);
 		}
 		

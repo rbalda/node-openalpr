@@ -10,4 +10,4 @@ function identify (id, path) {
 
 openalpr.Start ("./openalpr.conf","/usr/share/openalpr/runtime_data",null,"us");
 
-identify(2,'./plates/plate_cam120190205161435.jpg')
+identify(2,'./plates/plate.jpg')
